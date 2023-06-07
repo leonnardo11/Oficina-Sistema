@@ -154,12 +154,12 @@ namespace CarFix.Project.Controllers
 
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteBudget(Guid idBudget)
+        public IActionResult DeleteBudget(Guid id)
         {
             try
             {
 
-                _unitOfWork.BudgetRepository.Delete(idBudget);
+                _unitOfWork.BudgetRepository.Delete(id);
                 _unitOfWork.Save();
 
                 return StatusCode(204);
